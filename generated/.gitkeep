@@ -1,0 +1,3 @@
+# This folder holds generated files (PDFs, etc.)
+# The .gitkeep ensures the folder exists in version control.
+# Generated PDFs are ignored via .gitignore.

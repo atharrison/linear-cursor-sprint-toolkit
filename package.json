@@ -1,0 +1,27 @@
+{
+  "name": "linear-cursor-sprint-toolkit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A Cursor AI-powered toolkit for engineering team leads using Linear",
+  "scripts": {
+    "linear": "dotenvx run -- $HOME/.cargo/bin/linear",
+    "config": "dotenvx run -- $HOME/.cargo/bin/linear config",
+    "issues": "dotenvx run -- $HOME/.cargo/bin/linear issue list",
+    "issues:all": "dotenvx run -- $HOME/.cargo/bin/linear issue list -A -s backlog -s unstarted -s started",
+    "issues:active": "dotenvx run -- $HOME/.cargo/bin/linear issue list -A -s unstarted -s started",
+    "issues:inprogress": "dotenvx run -- $HOME/.cargo/bin/linear issue list -A -s started",
+    "issues:backlog": "dotenvx run -- $HOME/.cargo/bin/linear issue list -A -s backlog",
+    "issue": "dotenvx run -- $HOME/.cargo/bin/linear issue view",
+    "issue:web": "dotenvx run -- $HOME/.cargo/bin/linear issue view -w",
+    "sprint": "dotenvx run -- $HOME/.cargo/bin/linear issue list -A -s unstarted -s started",
+    "triage": "dotenvx run -- $HOME/.cargo/bin/linear issue list -A -s triage",
+    "ready-to-deploy": "dotenvx run -- $HOME/.cargo/bin/linear issue list -A --all-states --limit 500 | grep 'Ready for Deploy'",
+    "web": "dotenvx run -- $HOME/.cargo/bin/linear issue list -A -s started -w",
+    "web:all": "dotenvx run -- $HOME/.cargo/bin/linear issue list -A --all-states -w",
+    "pdf": "./scripts/generate-pdf.sh"
+  },
+  "devDependencies": {
+    "@dotenvx/dotenvx": "^1.34.0",
+    "md-to-pdf": "^5.2.5"
+  }
+}

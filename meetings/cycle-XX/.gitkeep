@@ -1,0 +1,11 @@
+# Meeting notes are organized by cycle (sprint).
+# 
+# Rename this folder to your current cycle number, e.g., cycle-19
+# Create a new folder for each sprint.
+#
+# Files in this folder:
+# - YYYY-MM-DD-standup.md
+# - YYYY-MM-DD-sprint-planning.md
+# - YYYY-MM-DD-retro.md
+# - YYYY-MM-DD-sprint-health.md
+# - etc.
