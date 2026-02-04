@@ -27,6 +27,12 @@ We use three swimlanes:
 ### 1. Pre-Retro Prep
 
 Gather context:
+
+**If Linear MCP is available** (preferred):
+- Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "started"` — work still in flight
+- Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "Ready for Deploy"` — waiting to close
+
+**If Linear MCP is NOT available** (fallback):
 ```bash
 npm run issues:inprogress   # What's still in flight
 npm run ready-to-deploy     # What's waiting to close

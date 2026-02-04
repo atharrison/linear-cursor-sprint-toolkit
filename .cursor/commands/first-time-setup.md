@@ -86,7 +86,7 @@ Add npm scripts for each team member. Insert after the existing scripts:
 
 Use lowercase initials for the script name (e.g., `issues:ah`, `issues:jd`).
 
-> **Important:** Use `--assignee [INITIALS]` (long form) to filter by assignee. 
+> **Important:** Use `--assignee [INITIALS]` (long form) to filter by assignee.
 > Do NOT use `-a` — that flag means "open in Linear.app", not filter by assignee.
 > Do NOT use `-A` — that means "all assignees" which defeats the purpose.
 
