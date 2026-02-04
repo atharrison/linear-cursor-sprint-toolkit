@@ -10,15 +10,25 @@ Save detailed reviews to: `meetings/cycle-XX/YYYY-MM-DD-triage-review.md`
 
 ## Instructions
 
-1. **Get the triage queue:**
-   ```bash
-   npm run triage
-   ```
+### 1. Get the triage queue
 
-2. **For each triaged item, fetch full details:**
-   ```bash
-   npm run issue -- TICKET-XXX
-   ```
+**If Linear MCP is available** (preferred):
+- Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "triage"`
+
+**If Linear MCP is NOT available** (fallback):
+```bash
+npm run triage
+```
+
+### 2. Fetch full details for each triaged item
+
+**If Linear MCP is available** (preferred):
+- Use `mcp_Linear_get_issue` with the issue ID for detailed info
+
+**If Linear MCP is NOT available** (fallback):
+```bash
+npm run issue -- TICKET-XXX
+```
 
 3. **Assess each issue using the priority framework:**
 

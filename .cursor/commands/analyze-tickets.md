@@ -10,15 +10,25 @@ Update or create a sprint status document at: `meetings/cycle-XX/YYYY-MM-DD-spri
 
 ## Instructions
 
-1. **Get the list of active tickets:**
-   ```bash
-   npm run issues:inprogress
-   ```
+### 1. Get the list of active tickets
 
-2. **For each team member, fetch full ticket details:**
-   ```bash
-   npm run issue -- TICKET-XXX
-   ```
+**If Linear MCP is available** (preferred):
+- Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "started"`
+
+**If Linear MCP is NOT available** (fallback):
+```bash
+npm run issues:inprogress
+```
+
+### 2. Fetch full ticket details for each team member
+
+**If Linear MCP is available** (preferred):
+- Use `mcp_Linear_get_issue` with the issue ID for detailed info including description, comments, and attachments
+
+**If Linear MCP is NOT available** (fallback):
+```bash
+npm run issue -- TICKET-XXX
+```
 
 3. **For each ticket, analyze:**
    - What is the purpose/goal?

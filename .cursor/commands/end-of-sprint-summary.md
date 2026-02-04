@@ -17,6 +17,12 @@ This is the "executive summary" of the sprint — shareable with managers, stake
 
 ### 1. Gather Sprint Data
 
+**If Linear MCP is available** (preferred):
+- Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "started"` — work still in flight (carried over)
+- Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "Ready for Deploy"` — what shipped this sprint
+- Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "Done"` — completed items
+
+**If Linear MCP is NOT available** (fallback):
 ```bash
 npm run issues:inprogress   # What's still in flight (carried over)
 npm run ready-to-deploy     # What shipped this sprint

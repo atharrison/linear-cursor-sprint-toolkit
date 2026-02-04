@@ -8,7 +8,9 @@ Provide a summary in chat (no file needed for quick checks).
 
 ## Instructions
 
-1. Run `npm run issues:inprogress` to see all started work
+1. **Get all started work:**
+   - **If Linear MCP is available** (preferred): Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "started"`
+   - **If Linear MCP is NOT available**: Run `npm run issues:inprogress`
 2. Look for items that are:
    - In "In Review" state
    - Haven't been updated in a while

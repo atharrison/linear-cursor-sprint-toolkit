@@ -13,7 +13,14 @@ Save to: `meetings/cycle-XX/YYYY-MM-DD-sprint-health.md`
 1. Check sprint dates (2-week sprints, started first Monday)
 2. Calculate: What day of the sprint are we on? How much time remains?
 
-3. Run these commands to gather data:
+3. **Gather ticket data:**
+
+   **If Linear MCP is available** (preferred):
+   - Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "started"` — work in flight
+   - Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "unstarted"` — todo items
+   - Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "backlog"` — backlog depth
+
+   **If Linear MCP is NOT available** (fallback):
    - `npm run issues:inprogress` — work in flight
    - `npm run linear -- issue list -A -s unstarted` — todo items
    - `npm run issues:backlog` — backlog depth

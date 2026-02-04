@@ -10,7 +10,9 @@ Save the review to: `meetings/cycle-XX/YYYY-MM-DD-ready-to-deploy-review.md`
 
 ## Instructions
 
-1. Run `npm run ready-to-deploy` to list all items in "Ready for Deploy" status
+1. **Get items in "Ready for Deploy" status:**
+   - **If Linear MCP is available** (preferred): Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "Ready for Deploy"`
+   - **If Linear MCP is NOT available**: Run `npm run ready-to-deploy`
 
 2. For each item, determine:
    - **Has it been deployed to Production?** Check deployment history or ask the assignee

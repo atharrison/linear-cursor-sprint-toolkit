@@ -16,6 +16,12 @@ Update or create: `meetings/cycle-XX/YYYY-MM-DD-sprint-planning.md`
 
 ### 1. Gather Data
 
+**If Linear MCP is available** (preferred):
+- Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "started"` — carried over from last sprint
+- Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "backlog"` — available work
+- Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "triage"` — any urgent items
+
+**If Linear MCP is NOT available** (fallback):
 ```bash
 npm run issues:inprogress   # Carried over from last sprint
 npm run issues:backlog      # Available work

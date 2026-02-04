@@ -10,24 +10,33 @@ This is separate from `meetings/` — focus notes are me-centered, meetings are 
 
 ## Instructions
 
-1. **Check recent meeting notes:**
-   - Read the most recent files in `meetings/cycle-XX/` for context (use current cycle)
+1. **Check previous day's standup:**
+   - **Read the previous day's standup file** (`meetings/cycle-XX/YYYY-MM-DD-standup.md`)
+   - Extract action items from "Post-Standup Reminders" section
+   - Note what people said they'd work on today (to check during standup)
+   - Identify any blockers or follow-ups that need attention
+2. **Check other recent meeting notes:**
+   - Read other recent files in `meetings/cycle-XX/` for context (grooming, planning, etc.)
    - Look for action items, blockers, or follow-ups from previous days
 
-2. **Check sprint calendar:**
+3. **Check sprint calendar:**
    - Read `docs/processes/sprint-calendar.md` for expected meetings
    - What day of the sprint are we on?
    - Any ceremonies coming up? (grooming, demo, retro, planning)
 
-3. **Check current sprint status:**
-   - Run `npm run issues:inprogress` for active work
-   - Run `npm run triage` for any urgent items
+4. **Check current sprint status:**
+   - **If Linear MCP is available** (preferred):
+     - Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "started"` for active work
+     - Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "triage"` for urgent items
+   - **If Linear MCP is NOT available**:
+     - Run `npm run issues:inprogress` for active work
+     - Run `npm run triage` for any urgent items
 
-4. **Ask about today's calendar:**
+5. **Ask about today's calendar:**
    - What meetings do I have today? (1:1s, planning sessions, etc.)
    - Check for scheduled 1:1s with team members
 
-5. **Identify focus areas:**
+6. **Identify focus areas:**
 
 ### As Team Lead
 - **Reviews blocking team**: Am I a reviewer for any PRs?
@@ -41,7 +50,7 @@ This is separate from `meetings/` — focus notes are me-centered, meetings are 
 - Architecture decisions
 - Cross-team coordination
 
-6. **Consider the time of day:**
+7. **Consider the time of day:**
    - **Morning–Mid-afternoon**: Best overlap with team
    - **Late afternoon**: Other work, less team focus
 
@@ -50,6 +59,7 @@ This is separate from `meetings/` — focus notes are me-centered, meetings are 
 Provide:
 1. Sprint day and upcoming ceremonies
 2. Today's time blocks including any mentioned calendar items
-3. Prioritized list of 3-5 things to focus on, with reasoning
-4. Any follow-ups or action items from recent meeting notes
-5. Tomorrow reminder (especially for async standup days)
+3. **Action items from previous day's standup** (from "Post-Standup Reminders")
+4. Prioritized list of 3-5 things to focus on, with reasoning
+5. Any follow-ups or action items from recent meeting notes
+6. Tomorrow reminder (especially for async standup days)

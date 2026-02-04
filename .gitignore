@@ -19,3 +19,6 @@ node_modules/
 
 # Generated files (PDFs, etc.)
 generated/*.pdf
+
+# Temp files and repository references
+temp/

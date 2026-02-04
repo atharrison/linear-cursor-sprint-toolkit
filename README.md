@@ -59,10 +59,21 @@ This will prompt you to select your workspace and team.
 
 ### 6. Customize for Your Team
 
-1. Update `docs/team-roster.md` with your team members
-2. Update `package.json` with npm scripts for your team members
-3. Update `.cursor/commands/` to reference your team's workflows
-4. Update `docs/processes/sprint-workflow.md` with your ceremony times
+Run the interactive setup wizard in Cursor:
+
+```
+/first-time-setup
+```
+
+This will walk you through:
+- Setting up your team roster
+- Generating npm scripts for each team member
+- Configuring your sprint schedule
+
+Or manually update:
+- `docs/team-roster.md` — Your team members
+- `package.json` — npm scripts for your team members
+- `docs/processes/sprint-workflow.md` — Your ceremony times
 
 ---
 
@@ -92,6 +103,12 @@ Run `/focus-today` to identify your priorities as team lead.
 ## Cursor Commands Reference
 
 Access these commands with `/command-name` in Cursor.
+
+### Setup
+
+| Command | When to Use | Output |
+|---------|-------------|--------|
+| `/first-time-setup` | After cloning, before first use | Updates `docs/team-roster.md`, `package.json` |
 
 ### Sprint Execution (Daily)
 

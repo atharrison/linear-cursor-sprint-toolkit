@@ -18,8 +18,12 @@ Save notes to: `meetings/cycle-XX/YYYY-MM-DD-backlog-grooming.md`
 
 ### 1. Check Current Sprint Capacity
 
-Run these commands to see current state:
+**If Linear MCP is available** (preferred):
+- Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "started"` — actively being worked on
+- Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "unstarted"` — todo items
+- Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "triage"` — items needing triage
 
+**If Linear MCP is NOT available** (fallback):
 ```bash
 npm run issues:inprogress   # What's actively being worked on
 npm run issues:active       # Todo + In Progress items
@@ -33,6 +37,10 @@ npm run triage              # Items needing triage decisions
 
 ### 2. Review the Backlog
 
+**If Linear MCP is available** (preferred):
+- Use `mcp_Linear_list_issues` with `team: "[TEAM]"` and `state: "backlog"`
+
+**If Linear MCP is NOT available** (fallback):
 ```bash
 npm run issues:backlog      # Items in backlog state
 ```
